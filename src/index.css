@@ -1,0 +1,308 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #041627;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1a2b3c;
+  --color-on-primary-container: #8192a7;
+  --color-primary-fixed: #d2e4fb;
+  --color-primary-fixed-dim: #b7c8de;
+  --color-on-primary-fixed: #0b1d2d;
+  --color-on-primary-fixed-variant: #38485a;
+
+  --color-secondary: #5f5e58;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e5e2da;
+  --color-on-secondary-container: #65645e;
+
+  --color-tertiary: #2b0b00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #4c1a00;
+  --color-on-tertiary-container: #ef681c;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-background: #fbf9f8;
+  --color-on-background: #1b1c1c;
+
+  --color-surface: #fbf9f8;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #44474c;
+  --color-surface-variant: #e4e2e2;
+
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3f3;
+  --color-surface-container: #efeded;
+  --color-surface-container-high: #eae8e7;
+  --color-surface-container-highest: #e4e2e2;
+
+  --color-outline: #74777d;
+  --color-outline-variant: #c4c6cd;
+
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
+
+  --font-headline-md: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-headline-sm: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-display-lg: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-display-lg-mobile: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body-lg: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
+  --font-body-md: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
+  --font-label-md: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
+  --font-caption: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 32px;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+
+  --text-display-lg-mobile: 32px;
+  --text-display-lg-mobile--line-height: 40px;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 40px;
+  --spacing-section-gap: 80px;
+  --spacing-container-max: 1280px;
+
+  --color-primary1: #3525cd;
+  --color-primary-container1: #4f46e5;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #dad7ff;
+
+  --color-secondary: #006c49;
+  --color-secondary-container: #6cf8bb;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #00714d;
+
+  --color-tertiary: #684000;
+  --color-tertiary-container: #885500;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #ffd4a4;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-background: #f8f9ff;
+  --color-on-background: #0b1c30;
+
+  --color-surface: #ffffff;
+  --color-on-surface: #0b1c30;
+  --color-surface-variant: #e5eeff;
+  --color-on-surface-variant: #464555;
+
+  /* Bổ sung thêm biến này cho Admin Sidebar & Component */
+  --color-surface-container-high: #f1f5f9;
+
+  --color-outline: #777587;
+  --color-outline-variant: #c7c4d8;
+  --color-inverse-surface: #213145;
+}
+
+body {
+  @apply bg-background text-on-background font-body-md antialiased;
+}
+
+/* Customer-only overrides. Keep the legacy @theme values above for admin. */
+.customer-theme {
+  --color-background: #f7f2e8;
+  --color-on-background: #30372e;
+  --color-surface: #fffcf6;
+  --color-on-surface: #30372e;
+  --color-on-surface-variant: #656b5e;
+  --color-surface-variant: #eee7da;
+  --color-surface-container-lowest: #fffcf6;
+  --color-surface-container-low: #f4eee3;
+  --color-surface-container: #eee7da;
+  --color-surface-container-high: #e8e1d3;
+  --color-surface-container-highest: #e1d8c8;
+  --color-primary: #263d26;
+  --color-on-primary: #fff8e7;
+  --color-primary-container: #344f34;
+  --color-on-primary-container: #fff8e7;
+  --color-primary-fixed: #e2e9d9;
+  --color-primary-fixed-dim: #c9d6bd;
+  --color-on-primary-fixed: #203322;
+  --color-on-primary-fixed-variant: #344f34;
+  --color-outline: #797b6c;
+  --color-outline-variant: #dcd5c5;
+  --customer-heading: #203322;
+  --customer-gold: #a88445;
+  --customer-gold-text: #765a2a;
+  --customer-shadow: 0 3px 14px rgb(38 61 38 / 6%);
+  color-scheme: light;
+}
+
+@layer components {
+  .customer-theme :where(h1, h2, h3) {
+    color: var(--customer-heading);
+    font-family: var(--font-serif);
+    overflow-wrap: anywhere;
+  }
+
+  .customer-theme :where(button, input, select, textarea) {
+    font-family: var(--font-sans);
+  }
+
+  .customer-theme :where(button, a, input, select, textarea) {
+    transition-duration: 200ms;
+  }
+}
+
+/* Shared controls stay scoped; semantic error/success colours are not remapped. */
+.customer-theme :where(button, a[class~="bg-primary"], a[class~="border-primary"]) {
+  border-radius: 8px;
+  min-height: 44px;
+}
+
+.customer-theme .book-card-action {
+  width: 2rem;
+  height: 2rem;
+  min-height: 0;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.customer-theme .book-card-category-toggle {
+  min-height: 0;
+  line-height: 1;
+}
+
+.customer-theme .filter-scrollbar {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+.customer-theme .filter-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.customer-theme .filter-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background-color: transparent;
+  background-clip: padding-box;
+}
+
+.customer-theme .filter-scrollbar:hover,
+.customer-theme .filter-scrollbar:focus-within {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-outline) transparent;
+}
+
+.customer-theme .filter-scrollbar:hover::-webkit-scrollbar-thumb,
+.customer-theme .filter-scrollbar:focus-within::-webkit-scrollbar-thumb {
+  background-color: var(--color-outline);
+}
+
+.customer-theme :where(input:not([type="checkbox"]):not([type="radio"]):not([type="number"]), select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.customer-theme :where(input, textarea)::placeholder {
+  color: var(--color-on-surface-variant);
+  opacity: 1;
+}
+
+.customer-theme :where(input[type="checkbox"], input[type="radio"]) {
+  accent-color: var(--color-primary);
+}
+
+.customer-theme :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px var(--color-surface);
+}
+
+.customer-theme :where(input, select, textarea)[aria-invalid="true"] {
+  border-color: var(--color-error);
+  outline-color: var(--color-error);
+}
+
+.customer-theme :where(button, input, select, textarea):disabled {
+  cursor: not-allowed;
+}
+
+.customer-theme :where(input, select, textarea):disabled {
+  background-color: var(--color-surface-container);
+  color: var(--color-on-surface-variant);
+}
+
+.customer-theme .customer-nav a[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.customer-theme .customer-nav a[aria-current="page"] > span {
+  transform: scaleX(1);
+}
+
+.customer-theme .customer-footer {
+  --color-primary: #fff8e7;
+  --color-on-surface: #fff8e7;
+  --color-on-surface-variant: #e4ddcc;
+  --color-outline-variant: #c4b99f;
+  background-color: #263d26;
+  color: #fff8e7;
+}
+
+.customer-theme .customer-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.customer-theme .customer-gold {
+  color: var(--customer-gold-text);
+}
+
+/* ToastContainer is a sibling of the router, not a child of the layout. */
+body:has(.customer-theme) .Toastify__toast {
+  --toastify-color-light: #fffcf6;
+  --toastify-text-color-light: #30372e;
+  --toastify-font-family: var(--font-sans);
+  border: 1px solid #dcd5c5;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgb(38 61 38 / 12%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .customer-theme *,
+  .customer-theme *::before,
+  .customer-theme *::after,
+  body:has(.customer-theme) .Toastify__toast {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .customer-theme :where(button, a, img):hover {
+    scale: 1 !important;
+    translate: none !important;
+  }
+}
